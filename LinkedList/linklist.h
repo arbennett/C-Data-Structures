@@ -1,19 +1,17 @@
-/*
- * linklist.h
- *
- *  Created on: Jul 9, 2014
- *      Author: robot
+/**
+ * Write here about what's going on
  */
 
-#ifndef LINKLIST_H_
-#define LINKLIST_H_
+typedef struct _node{
+	int data;
+	struct _node* next;
+} node;
 
-struct node* createLinkedList(int val);
-struct node* addToFront(int val);
-struct node* addToBack(int val);
-struct node* getHead();
-struct node* getNthNode(int N);
-struct node* searchFor(int N);
-
-
-#endif /* LINKLIST_H_ */
+void initList();
+node* getNthNode(int);
+node* searchFor(int);
+void addToFront(int);
+void addToBack(int);
+node* deleteValue(int);
+void printNode(node*);
+void printList();
